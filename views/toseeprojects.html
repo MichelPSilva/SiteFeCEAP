@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% set title = "FeCEAP 2021" %}
+{% set bodyId = "view-page-project" %}
+
+{% block content %}
+<section>
+    <div id="container">
+    <br><br>
+    <center>
+    {% for projeto in rows %}
+    <div class="content">
+        <h3>{{ projeto.title }}</h3>
+        <p>{{ projeto.category }}</p>
+    </div>
+    <div class="forma">
+            <div class="description">
+                {{ projeto.description }}
+            </div>
+    </div>   
+    <br>
+    {% endfor %}  
+        <button class="button" href="/projetos">Voltar</button>
+        <br>
+        <button class="button">Deletar</button>
+    </center>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</section>
+{% endblock %}
